@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Belajar Vue</title>
+</head>
+
+<body>
+    <div id="app">
+        {{word}}
+        </br>
+        <img v-bind:src="image" v-bind:alt="altText" v-bind:title="title"/>
+        <p v-if="inStock">In Stock</p>
+        <p v-else>Out of Stock</p>
+        <ul>
+            <li v-for="book in books"> {{book}} </li>
+        </ul>
+        <ol>
+            <li v-for="book in books2"> {{book.name}} - {{book.author}} </li>
+        </ol>
+        <button v-on:click="addCart()">Add to Cart</button> <p>Cart({{cart}})</p>
+    </div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+<script src="main.js"></script>
+
+</html>
